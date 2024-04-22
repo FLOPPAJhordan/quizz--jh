@@ -52,7 +52,7 @@ function showResult() {
     startContainer.style.display = 'none';
     quizContainer.style.display = 'none';
     resultContainer.style.display = 'block';
-    playerScoreElement.textContent = `Player: ${playerName}, your score is:`;
+    playerScoreElement.textContent = `Player: ${playerName}, sua pontuação é:`;
     document.getElementById('final-score').textContent = score;
 
     questions.forEach((q, index) => {
