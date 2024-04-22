@@ -52,12 +52,12 @@ function showResult() {
     startContainer.style.display = 'none';
     quizContainer.style.display = 'none';
     resultContainer.style.display = 'block';
-    playerScoreElement.textContent = `Player: ${playerName}, sua pontuação é:`;
+    playerScoreElement.textContent = `${playerName}, sua pontuação é:`;
     document.getElementById('final-score').textContent = score;
 
     questions.forEach((q, index) => {
         const li = document.createElement('li');
-        li.textContent = q.question + " - Correct Answer: " + q.answer;
+        li.textContent = q.question + " - Resposta certa: " + q.answer;
         correctAnswersElement.appendChild(li);
     });
 }
@@ -65,7 +65,7 @@ function showResult() {
 function submitAnswer() {
     const selectedOption = document.querySelector('input[name="option"]:checked');
     if (!selectedOption) {
-        alert("Please select an option");
+        alert("Você é burro ou oque?");
         return;
     }
 
@@ -86,7 +86,7 @@ function submitAnswer() {
 function startQuiz() {
     playerName = playerNameInput.value.trim();
     if (playerName === "") {
-        alert("Please enter your name");
+        alert("MANDEI ESCREVER SEU NOME!!!");
         return;
     }
 
